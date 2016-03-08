@@ -7,9 +7,9 @@
 
 
 // variables & paths
-var secsignPreload = secsignPluginPath + '/secsign-php-full/images/preload.gif';
-var secsignAPI = secsignPluginPath + '/secsign-php-full/secsign-jsapi/SecSignIDApi.js';
-var apiurl = secsignPluginPath + '/secsign-php-full/secsign-jsapi//signin-bridge.php';
+var secsignPreload = secsignPluginPath + '/secsign/secsignphphelper/images/preload.gif';
+var secsignAPI = secsignPluginPath + '/secsign/secsignphphelper/secsign-jsapi/SecSignIDApi.js';
+var apiurl = secsignPluginPath + '/secsign/secsignphphelper/secsign-jsapi/signin-bridge.php';
 var pwloginbutton = '#pwdloginbtn';
 var pwloginuser = '#login-user';
 var pwloginpw = '#login-pw';

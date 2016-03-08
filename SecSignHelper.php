@@ -58,11 +58,11 @@ class SecSignHelper {
     }
 
     private function includeCSS(){
-        return '<link rel="stylesheet" type="text/css" href="vendor/secsign-php-full/css/secsignid_layout.css">';
+        return '<link rel="stylesheet" type="text/css" href="vendor/secsign/secsignphphelper/css/secsignid_layout.css">';
     }
 
     private function includeJS(){
-        return '<script src="vendor/secsign-php-full/js/secsignfunctions.js"></script>';
+        return '<script src="vendor/secsign/secsignphphelper/js/secsignfunctions.js"></script>';
     }
 
     private function printForm(){
@@ -110,7 +110,7 @@ class SecSignHelper {
                 <a id="secsignid-learnmore" href="https://www.secsign.com/products/secsign-id/" target="_blank">Learn more</a>
 
                 <img style="margin: 0 auto;width: 100%;display: block;max-width: 200px;"
-                     src="vendor/secsign-php-full/images/secsignhelp.png">
+                     src="vendor/secsign/secsignphphelper/images/secsignhelp.png">
 
                 <a class="linktext" id="secsignid-info-secsignid" href="#">Go back to the login screen</a>
 
@@ -127,7 +127,7 @@ class SecSignHelper {
 
                 <div id="secsignid-accesspass-container">
                     <img id="secsignid-accesspass-img"
-                         src="vendor/secsign-php-full/images/preload.gif">
+                         src="vendor/secsign/secsignphphelper/images/preload.gif">
                 </div>
 
                 <div id="secsignid-accesspass-info">
