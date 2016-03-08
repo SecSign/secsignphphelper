@@ -1,0 +1,23 @@
+{
+    "name": "secsign/secsignphphelper",
+    "version": "1.0",
+    "type": "library",
+    "description": "Two Factor Authentication with SecSign ID",
+    "keywords": ["2fa","secsign"],
+    "homepage": "https://secsign.com",
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "SecSign",
+            "email": "info@secsign.com",
+            "homepage": "https://secsign.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "info@secsign.com"
+    },
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
