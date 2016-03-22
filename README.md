@@ -28,20 +28,27 @@ Include this package in your `composer.json` and run `composer install`
 
 **Usage**
 
-Include the SecSignHelper
+Include the SecSignHelper and create a new SecSignHelper object. Extpath defines the public directory where the SecSign directory is located (usually it is /vendor with composer). The API php files should be externally available for ajax requests and polling to validate logins on the fly. Please make sure that jQuery is running, when building the SecSign ID login form with buildLoginForm.
+
+The form will be submitted automatically when the user accepts the access pass on his smartphone. If the user is authenticated correctly, validateLogin will return true and the POST data will include the SecSign ID, which can be used to retrieve user data in the local database etc. If the authentication fails, validateLogin will return an error message. 
+
 ```php
+<?php
+
 require_once __DIR__.'/vendor/secsign/secsignphphelper/SecSignHelper.php';
-```
 
-Print secsign login form with polling etc. Make sure that jQuery is available
-```php
-echo $secsignid->buildLoginForm("SecSign OAuth2.0 Provider Login", $extPath, "true");
-```
+$secsignid = new SecSignHelper;
+$extPath = "http://localhost:8088/vendor";
 
-The form submits when the user accepts the access pass on his smartphone. If the user is authenticated correctly, validateLogin will return true and the POST data will include the SecSign ID, which can be used to retrieve user data in the local database etc.
-If the authentication fails, validateLogin will return an error message. 
-```php
-$authenticated = $secsignid->validateLogin($_POST);
+if (empty($_POST)) {
+    echo $secsignid->buildLoginForm("SecSign ID Login", $extPath, "true");
+} else {
+  $authenticated = $secsignid->validateLogin($_POST);
+  if($authenticated === true){
+    // User is logged in, do something
+    $user_secsign_id = $_POST['secsigniduserid'];
+  }
+}
 ```
 
 Have a look at the Php-Api tutorial <https://www.secsign.com/php-tutorial/>
