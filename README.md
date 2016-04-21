@@ -7,6 +7,7 @@ SecSign ID Api is a ready to use two-factor authentication package for PHP web a
 It allows a secure login using a private key on a smart phone running SecSign ID by SecSign Technologies Inc.
 
 For a more detailed overview please refer to the [SecSign ID PHP Api tutorial](https://www.secsign.com/php-tutorial/) and to the [SecSign ID PHP Helper Bundle for Composer](https://www.secsign.com/php-helper-bundle-for-composer/)
+
 **Installation**
 
 Include this package in your `composer.json` and run `composer install`
